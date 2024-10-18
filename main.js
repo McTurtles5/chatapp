@@ -10,7 +10,7 @@ wss.on("connection", function connection(ws) {
 	ws.on("message", function handleuser(msg) {
 		msg = msg.toString().trim();
 
-		if (msg.length < 9 || msg.length > 100000) {
+		if (msg.length < 9 || msg.length > 50000000) {
 			ws.close();
 			return;
 		}
